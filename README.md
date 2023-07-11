@@ -30,7 +30,7 @@
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> This wev developer conference website bulit with HTML , CSS and Javascript
+> This awesome book project bulit with HTML , CSS and Javascript
 
 <!-- Features -->
 
