@@ -89,3 +89,12 @@ function clearInput() {
   bookTitle.value = '';
   bookAuthor.value = '';
 }
+
+// Add event listener to click or submit button
+const addButton = document.getElementById('add-btn');
+addButton.addEventListener('click', (event) => {
+  event.preventDefault();
+  const title = bookTitle.value;
+  const author = bookAuthor.value;
+  addBook(title, author);
+});
