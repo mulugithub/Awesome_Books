@@ -4,6 +4,7 @@ const booksList = document.getElementById('book-list');
 const errorMessage = document.getElementById('error-message');
 const bookTitle = document.getElementById('title');
 const bookAuthor = document.getElementById('author');
+
 function addBook(title, author) {
   // Check if book already exists in collection
   if (isDuplicate(title, author)) {
@@ -18,6 +19,12 @@ function addBook(title, author) {
       clearInput();
     }, 5000); // hide the error message after 5 seconds
     return;
+  }
+
+  if(bookTitle.value === '' || bookAuthor.value === '') {
+    errorMessage.textContent = 'Please enter book details';
+    preventDefault();
+    errorMessage.style.display = 'block';
   }
 
   // Generate new unique ID for book
@@ -74,6 +81,7 @@ function displayBook(id, title, author) {
   // Add book to list
   booksList.appendChild(bookElement);
 }
+
 function counterAutoIncreatmentId() {
   if (books.length === 0) {
     return 1;
@@ -97,6 +105,7 @@ addButton.addEventListener('click', (event) => {
   const title = bookTitle.value;
   const author = bookAuthor.value;
   addBook(title, author);
+  errorMessage.style.display = 'none';
 });
 
 Window.addEventListener('load', (e) => {
