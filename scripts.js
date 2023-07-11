@@ -98,3 +98,14 @@ addButton.addEventListener('click', (event) => {
   const author = bookAuthor.value;
   addBook(title, author);
 });
+
+Window.addEventListener('load', (e) => {
+  e.preventDefault();
+  // Load books from local storage
+  if (localStorage.getItem('books')) {
+    books = JSON.parse(localStorage.getItem('books'));
+    books.forEach((book) => {
+      displayBook(book.id, book.title, book.author);
+    });
+  }
+});
