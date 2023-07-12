@@ -105,4 +105,19 @@ class Books {
       Books.clearInputFields();
     }, 5000);// hide the success message after 5 seconds
   }
+
+  static showErrorMesssage(message) {
+    spanMessage.classList.add('error');
+    spanMessage.classList.remove('success');
+    spanMessage.textContent = message;
+    spanMessage.style.display = 'block';
+    bookTitle.style.border = '1px solid red';
+    bookAuthor.style.border = '1px solid red';
+    setTimeout(() => {
+      spanMessage.style.display = 'none';
+      bookTitle.style.border = '';
+      bookAuthor.style.border = '';
+      Books.clearInputFields();
+    }, 5000);// hide the success message after 5 seconds
+  }
 }
