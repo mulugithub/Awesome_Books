@@ -43,7 +43,9 @@
 - **[Remove book]**
 - **[Save to localStorage]**
 - **[Prevent duplicate record]**
+- **[Prevent empty record]**
 - **[Show error message after submit button]**
+- **[Show success message after submit button]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -27,6 +27,9 @@ section {
 
 section.book-container {
   border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 article {
@@ -98,8 +101,16 @@ button.remove-btn {
   border-radius: 0.25rem;
 }
 
-.error-message {
+.error {
   color: #ff0707;
-  padding: 1rem;
   border-radius: 0.5rem;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.success {
+  color: green;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  padding: 1rem;
 }
