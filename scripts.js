@@ -90,4 +90,19 @@ class Books {
     const booksJson = localStorage.getItem('bookLists');
     return booksJson ? JSON.parse(booksJson) : [];
   }
+
+  static showsuccessMessage(message) {
+    spanMessage.classList.add('success');
+    spanMessage.classList.remove('error');
+    spanMessage.textContent = message;
+    spanMessage.style.display = 'block';
+    bookTitle.style.border = '1px solid green';
+    bookAuthor.style.border = '1px solid green';
+    setTimeout(() => {
+      spanMessage.style.display = 'none';
+      bookTitle.style.border = '';
+      bookAuthor.style.border = '';
+      Books.clearInputFields();
+    }, 5000);// hide the success message after 5 seconds
+  }
 }
