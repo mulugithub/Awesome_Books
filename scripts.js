@@ -121,3 +121,19 @@ class Books {
     }, 5000);// hide the success message after 5 seconds
   }
 }
+
+// Add event listener to click or submit button
+const addButton = document.getElementById('add-btn');
+addButton.addEventListener('click', (event) => {
+  event.preventDefault();
+  const title = bookTitle.value.trim();
+  const author = bookAuthor.value.trim();
+  if (title && author) {
+    Books.addBook(title, author);
+  }
+});
+
+// Load books from local storage and render it on the page
+Books.loadBooks().forEach((book) => {
+  Books.renderBooks(book.id, book.title, book.author);
+});
