@@ -177,3 +177,6 @@ const dateTime = () => {
   };
   return date.toLocaleString('en-US', options);
 };
+
+const date = dateTime();
+document.getElementById('date-time').innerHTML = `${date}`;
