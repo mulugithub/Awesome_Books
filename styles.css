@@ -18,9 +18,8 @@ main {
 
 section {
   flex: 1;
-  min-width: 300px;
-  max-width: 400px;
-  background-color: #eee;
+  min-width: 40%;
+  max-width: 100%;
   border-radius: 0.5rem;
   overflow: hidden;
 }
@@ -36,16 +35,10 @@ article {
   padding: 1rem;
 }
 
-h1 {
-  margin: 0;
-  text-align: center;
-  padding: 0.5rem;
-}
-
 h2 {
   margin: 0;
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 form {
@@ -64,7 +57,7 @@ input {
 button {
   background-color: #fff;
   color: #000;
-  padding: 0.6rem;
+  padding: 0.3rem 0.6rem;
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -84,14 +77,13 @@ li {
   align-items: center;
   padding: 0.5rem;
   background-color: #fff;
-  border-bottom: 2px solid #afacac;
 }
 
 li:last-child {
   border-bottom: none;
 }
 
-li:nth-child(odd) {
+.book-list li:nth-child(odd) {
   background-color: #f4f2f2;
 }
 
@@ -102,15 +94,90 @@ button.remove-btn {
 }
 
 .error {
+  background-color: #eee;
   color: #ff0707;
   border-radius: 0.5rem;
-  font-size: 1.5rem;
-  padding: 1rem;
+  font-size: 1rem;
+  padding: 0.8rem;
+  font-weight: 600;
+  width: 50%;
+  text-align: center;
 }
 
 .success {
-  color: green;
+  background-color: #eee;
+  color: rgb(10, 193, 10);
   border-radius: 0.5rem;
-  font-size: 1.5rem;
-  padding: 1rem;
+  font-size: 1rem;
+  padding: 0.8rem;
+  font-weight: 600;
+  min-width: 50%;
+  max-width: 100%;
+  text-align: center;
+
+}
+
+/* header section */
+
+ nav {
+  background-color: #fff;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  border:  2px solid #afacac;
+  margin: 10px 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li {
+  margin: 0 5px;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+nav a:focus {
+  color: #6278dc;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Content section styles */
+
+.content-section {
+  margin: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+#date-container {
+  display: flex;
+}
+#date-time {
+  align-self: flex-end;
+}
+
+.contact ul > li{
+  list-style: circle;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  border: 2px solid #ccc;
+}
+
+footer p {
+  position: absolute;
+  bottom: 0;
+  width: 95%;
+  border: 2.5px solid #ccc;
+  padding: 10px;
 }
