@@ -50,7 +50,8 @@ class Books {
     if (bookElement) {
       bookElement.remove();
     }
-    Books.showsuccessMessage('Book removed successfully');
+    // Display success message
+    Books.showsuccessMessage('Book removed successfully!');
   }
 
   static renderBooks(id, title, author) {
@@ -64,6 +65,7 @@ class Books {
     removeButton.textContent = 'Remove';
     removeButton.addEventListener('click', () => {
       Books.removeBook(id);
+      Books.showsuccessMessage('Book removed successfully!');
     });
     bookElement.appendChild(removeButton);
     // Add book to list
@@ -103,7 +105,7 @@ class Books {
       bookTitle.style.border = '';
       bookAuthor.style.border = '';
       Books.clearInputFields();
-    }, 5000);// hide the success message after 5 seconds
+    }, 2000);// hide the success message after 2 seconds
   }
 
   static showErrorMesssage(message) {
@@ -118,7 +120,7 @@ class Books {
       bookTitle.style.border = '';
       bookAuthor.style.border = '';
       Books.clearInputFields();
-    }, 5000);// hide the success message after 5 seconds
+    }, 2000);// hide the success message after 2 seconds
   }
 }
 
@@ -135,6 +137,7 @@ addButton.addEventListener('click', (event) => {
 
 // Load books from local storage and render it on the page
 Books.loadBooks().forEach((book) => {
+  // Display book in list
   Books.renderBooks(book.id, book.title, book.author);
 });
 
