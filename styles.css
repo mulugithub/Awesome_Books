@@ -7,6 +7,42 @@
   font-family: "Lato", sans-serif;
 }
 
+/* header section */
+
+nav {
+  background-color: #eee;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  border: 3px solid #ccc;
+  padding: 10px;
+  margin: 0 20px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+
+nav li {
+  padding: 0 0.56rem;
+  background-color: #eee;
+}
+
+nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+nav a:focus {
+  color: #6278dc;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -18,9 +54,8 @@ main {
 
 section {
   flex: 1;
-  min-width: 300px;
-  max-width: 400px;
-  background-color: #eee;
+  min-width: 50%;
+  max-width: 100%;
   border-radius: 0.5rem;
   overflow: hidden;
 }
@@ -32,20 +67,14 @@ section.book-container {
   flex-wrap: wrap;
 }
 
-article {
-  padding: 1rem;
-}
-
-h1 {
-  margin: 0;
-  text-align: center;
-  padding: 0.5rem;
+.book-list {
+  border: 3px solid #ccc;
 }
 
 h2 {
   margin: 0;
   text-align: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
 }
 
 form {
@@ -64,53 +93,89 @@ input {
 button {
   background-color: #fff;
   color: #000;
-  padding: 0.6rem;
-  border: none;
+  padding: 0.3rem 0.6rem;
   border-radius: 0.25rem;
   cursor: pointer;
   align-self: flex-end;
-  box-shadow: 4px 4px 0 rgb(2, 2, 2);
+  box-shadow: 4px 4px 0 #000;
+  border: 1px solid #000;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
+.books ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-li {
+.books ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem;
-  background-color: #fff;
-  border-bottom: 2px solid #afacac;
 }
 
-li:last-child {
-  border-bottom: none;
-}
-
-li:nth-child(odd) {
+.book-list li:nth-child(odd) {
   background-color: #f4f2f2;
 }
 
-button.remove-btn {
-  background-color: #fff;
-  color: #000;
-  border-radius: 0.25rem;
-}
-
 .error {
+  background-color: #eee;
   color: #ff0707;
   border-radius: 0.5rem;
-  font-size: 1.5rem;
-  padding: 1rem;
+  font-size: 1rem;
+  padding: 0.8rem;
+  font-weight: 600;
+  min-width: 40%;
+  max-width: 100%;
+  text-align: center;
 }
 
 .success {
-  color: green;
+  background-color: #eee;
+  color: rgb(10, 193, 10);
   border-radius: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  padding: 0.8rem;
+  font-weight: 600;
+  min-width: 40%;
+  max-width: 100%;
+  text-align: center;
+}
+
+.content-section {
+  margin: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+#date-time {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.contact {
   padding: 1rem;
+}
+
+.contact ul {
+  margin-top: 1.5rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  position: fixed;
+  border: 2.5px solid #ccc;
+  background-color: #eee;
+  width: 97%;
+  padding: 0.5rem 0.8rem;
+  bottom: 0;
 }
